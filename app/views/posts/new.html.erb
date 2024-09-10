@@ -1,0 +1,28 @@
+<%= form_tag(posts_path, method: :get) do %>
+    <h3>Q.1 好みの麺の太さは？</h3>
+        <label>
+            <%= radio_button_tag :thickness, "1" %> 太め
+        </label>
+        <label>
+            <%= radio_button_tag :thickness, "2" %> 細め
+        </label>
+
+    <h3>Q.2 麺の食感、何が大事？</h3>
+        <label>
+            <%= radio_button_tag :texture, "1" %> コシの強さ！
+        </label>
+        <label>
+            <%= radio_button_tag :texture, "2" %> もちっと柔らかいの！
+        </label>
+
+    <h3>Q.3 温冷、どっちが好み？</h3>
+        <label>
+            <%= radio_button_tag :temperature, "1" %> 温かいうどん！
+        </label>
+        <label>
+            <%= radio_button_tag :temperature, "2" %> 冷たいうどん！
+        </label>
+
+    <br>
+    <%= submit_tag '診断する'  %>
+ <% end %>
