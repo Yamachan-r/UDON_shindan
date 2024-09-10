@@ -1,28 +1,40 @@
 <%= form_tag(posts_path, method: :get) do %>
-    <h3>Q.1 好みの麺の太さは？</h3>
-        <label>
-            <%= radio_button_tag :thickness, "1" %> 太め
-        </label>
-        <label>
-            <%= radio_button_tag :thickness, "2" %> 細め
-        </label>
+  <h3 class="text-lg font-semibold">Q.1 メインは麺？具も大事？</h3>
+  <div class="flex flex-col space-y-2 items-center">
+    <label class="inline-flex items-center">
+      <%= radio_button_tag :main, "1", params[:main] == "1", class: "radio radio-primary" %>
+      <span class="ml-2">具も含めて重要！</span>
+    </label>
+    <label class="inline-flex items-center">
+      <%= radio_button_tag :main, "2", params[:main] == "2", class: "radio radio-primary" %>
+      <span class="ml-2">麺が主役でしょ！</span>
+    </label>
+  </div>
 
-    <h3>Q.2 麺の食感、何が大事？</h3>
-        <label>
-            <%= radio_button_tag :texture, "1" %> コシの強さ！
-        </label>
-        <label>
-            <%= radio_button_tag :texture, "2" %> もちっと柔らかいの！
-        </label>
+  <h3 class="text-lg font-semibold mt-4">Q.2 麺の食感、何が大事？</h3>
+  <div class="flex flex-col space-y-2 items-center">
+    <label class="inline-flex items-center">
+      <%= radio_button_tag :texture, "1", params[:texture] == "1", class: "radio radio-primary" %>
+      <span class="ml-2">コシの強さは最重視！</span>
+    </label>
+    <label class="inline-flex items-center">
+      <%= radio_button_tag :texture, "2", params[:texture] == "2", class: "radio radio-primary" %>
+      <span class="ml-2">柔らかいのもいいよね</span>
+    </label>
+  </div>
 
-    <h3>Q.3 温冷、どっちが好み？</h3>
-        <label>
-            <%= radio_button_tag :temperature, "1" %> 温かいうどん！
-        </label>
-        <label>
-            <%= radio_button_tag :temperature, "2" %> 冷たいうどん！
-        </label>
+  <h3 class="text-lg font-semibold mt-4">Q.3 お汁の有無は？</h3>
+  <div class="flex flex-col space-y-2 items-center">
+    <label class="inline-flex items-center">
+      <%= radio_button_tag :soup, "1", params[:soup] == "1", class: "radio radio-primary" %>
+      <span class="ml-2">有りで！</span>
+    </label>
+    <label class="inline-flex items-center">
+      <%= radio_button_tag :soup, "2", params[:soup] == "2", class: "radio radio-primary" %>
+      <span class="ml-2">無しで！</span>
+    </label>
+  </div>
 
-    <br>
-    <%= submit_tag '診断する'  %>
- <% end %>
+  <br>
+  <%= submit_tag '診断する', class: "btn btn-primary" %>
+<% end %>

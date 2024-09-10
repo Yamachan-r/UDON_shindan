@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "うどん診断" %></title>
+    <title><%= content_for(:title) || "ご当地うどん診断" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -17,7 +17,21 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="flex flex-col min-h-screen">
+    <header class="bg-primary text-white p-5">
+      <div class="container mx-auto">
+        <h1 class="text-2xl font-bold">
+          <%= link_to 'ご当地うどん診断！', root_path %>
+        </h1>
+      </div>
+    </header>
+
+    <main class="flex-grow container text-center mx-auto mt-8 flex-grow">
+      <%= yield %>
+    </main>
+
+    <footer class="bg-neutral-content text-grey text-center p-4 mt-8 mt-auto" >
+      <p>2024 RUNTEQ_festival.5</p>
+    </footer>
   </body>
 </html>

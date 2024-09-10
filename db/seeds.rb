@@ -12,35 +12,51 @@ Post.create!(
   [
     {
       number: '111',
-      content: ''
+      content: '吉田うどん',
+      region: '静岡県',
+      info: ''
     },
     {
       number: '112',
-      content: ''
+      content: '武蔵野うどん',
+      region: '埼玉県、東京都',
+      info: ''
     },
     {
       number: '122',
-      content: ''
+      content: 'かすうどん',
+      region: '大阪府',
+      info: ''
     },
     {
       number: '121',
-      content: ''
+      content: '皿うどん',
+      region: '長崎県',
+      info: ''
     },
     {
       number: '222',
-      content: ''
+      content: '伊勢うどん',
+      region: '三重県',
+      info: ''
     },
     {
       number: '221',
-      content: ''
+      content: '博多うどん',
+      region: '福岡県',
+      info: ''
     },
     {
       number: '211',
-      content: ''
+      content: '讃岐うどん',
+      region: '香川県',
+      info: ''
     },
     {
       number: '212',
-      content: ''
+      content: '稲庭うどん',
+      region: '秋田県',
+      info: ''
     },
   ]
 )

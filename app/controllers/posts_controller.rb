@@ -1,13 +1,12 @@
 class PostsController < ApplicationController
+  def new; end
+
   def index
-    thickness = params[:thickness]
+    main = params[:main]
     texture = params[:texture]
-    temperature = params[:temperature]
+    soup = params[:soup]
 
-    @result = thickness + texture + temperature
+    @result = main + texture + soup
     @posts = Post.all
-  end
-
-  def new
   end
 end
