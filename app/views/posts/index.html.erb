@@ -1,7 +1,7 @@
 <% @posts.each do |t| %>
   <% if t.number == @result %>
     <div class="tweet">
-      あなたにおすすめのご当地うどんは<%= t.content %>です。
+      あなたにおすすめのご当地うどんは、<%= t.content %>です。
       <br>
       地域：<%= t.region %>
       <br>
