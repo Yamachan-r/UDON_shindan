@@ -14,49 +14,49 @@ Post.create!(
       number: '111',
       content: '吉田うどん',
       region: '静岡県',
-      info: ''
+      info: '1'
     },
     {
       number: '112',
       content: '武蔵野うどん',
       region: '埼玉県、東京都',
-      info: ''
+      info: '2'
     },
     {
       number: '122',
       content: 'かすうどん',
       region: '大阪府',
-      info: ''
+      info: '3'
     },
     {
       number: '121',
       content: 'ホルモンうどん',
       region: '岡山県',
-      info: ''
+      info: '4'
     },
     {
       number: '222',
       content: '伊勢うどん',
       region: '三重県',
-      info: ''
+      info: '5'
     },
     {
       number: '221',
       content: '博多うどん',
       region: '福岡県',
-      info: ''
+      info: '6'
     },
     {
       number: '211',
       content: '讃岐うどん',
       region: '香川県',
-      info: ''
+      info: '7'
     },
     {
       number: '212',
       content: '稲庭うどん',
       region: '秋田県',
-      info: ''
+      info: '8'
     }
   ]
 )
