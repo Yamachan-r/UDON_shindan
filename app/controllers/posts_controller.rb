@@ -8,5 +8,6 @@ class PostsController < ApplicationController
 
     @result = main + texture + soup
     @posts = Post.all
+    pp @posts
   end
 end
