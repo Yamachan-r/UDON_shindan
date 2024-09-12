@@ -16,8 +16,10 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
 
-    <meta property="og:description" content="あなたにあったご当地うどんを診断しよう!" /> <!--⑤-->
-    <meta property="og:image" content="https://udon-shindan.onrender.com/UDONcard.jpeg" /> <!--⑥-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ご当地うどん診断">
+    <meta name="twitter:description" content="あなたにあったご当地うどんを診断しよう!" />
+    <meta name="twitter:image" content="https://udon-shindan.onrender.com/UDONcard.jpeg" />
   </head>
 
   <body class="flex flex-col min-h-screen">
