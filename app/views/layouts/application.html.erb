@@ -15,15 +15,18 @@
     <link rel="apple-touch-icon" href="/icon.png">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+
+    <meta property="og:description" content="あなたにあったご当地うどんを診断しよう!" /> <!--⑤-->
+    <meta property="og:image" content="https://udon-shindan.onrender.com/images/UDONcard.jpeg" /> <!--⑥-->
   </head>
 
   <body class="flex flex-col min-h-screen">
     <header class="bg-primary text-white p-5">
       <div class="flex flex-row space-x-2 container mx-auto">
-        <%= image_tag 'header.png' %>
         <h1 class="text-2xl font-bold">
           <%= link_to 'ご当地うどん診断', root_path %>
-        </h1>      </div>
+        </h1>
+      </div>
     </header>
 
     <main class="flex-grow container text-center mx-auto mt-8 flex-grow">
