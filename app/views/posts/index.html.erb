@@ -1,6 +1,6 @@
 <% @posts.each do |t| %>
   <% if t.number == @result %>
-    <div class="tweet">
+    <div class="your_udon">
       あなたにおすすめのご当地うどんは、<%= t.content %>です。
       <br>
       地域：<%= t.region %>
@@ -14,7 +14,6 @@
     data-text="ご当地うどん診断の結果は、<%= t.content %>でした！！ ▼あなたもご当地うどん診断やってみてね！" 
     data-url="https://udon-shindan.onrender.com" 
     data-hashtags="ご当地うどん診断" 
-    data-image="UDONcard.jpeg"
     data-show-count="false">Tweet</a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <% end %>
