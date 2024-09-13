@@ -20,13 +20,12 @@
   <body class="flex flex-col min-h-screen">
     <header class="bg-primary text-white p-5">
       <div class="flex flex-row space-x-2 container mx-auto">
-        <h1 class="text-2xl font-bold">
+        <div class="text-2xl font-bold">
           <%= link_to 'ご当地うどん診断', root_path %>
-        </h1>
-      </div>
+        </div>
     </header>
 
-    <main class="flex-grow container text-center mx-auto mt-8 flex-grow">
+    <main class="flex-grow container text-center mx-auto flex-grow">
       <%= yield %>
     </main>
 

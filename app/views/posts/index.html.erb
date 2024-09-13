@@ -8,25 +8,37 @@
   <meta name="twitter:image" content="https://udon-shindan.onrender.com/UDONcard.jpg" />
 </head>
 
-<div class="flex flex-col space-y-2 items-center">
-  <%= "診断結果" %>
-  <% @posts.each do |t| %>
-    <div class="your_udon">
-      あなたにおすすめのご当地うどんは、<%= t.content %>です。
-      <br>
-      地域：<%= t.region %>
-      <br>
-      詳細：<%= t.info %>
-      <br>
-      <%= @result.inspect %>
-    </div>
-
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
-    class="twitter-share-button" 
-    data-text="ご当地うどん診断の結果は、<%= t.content %>でした！！ ▼あなたもご当地うどん診断やってみてね！" 
-    data-url="https://udon-shindan.onrender.com" 
-    data-hashtags="ご当地うどん診断" 
-    data-show-count="false"></a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  <% end %>
+<div class="flex flex-col items-center pt-3">
+  <div class="pb-3 text-3xl font-semibold">診断結果</div>
+    <% @posts.each do |t| %>
+      <div class="card bg-base-200 w-96 shadow-xl">
+        <div class="card-body">
+          <div class="text-1xl items-center">
+            あなたにオススメのご当地うどんは<br>
+            <span class="text-xl font-semibold"><%= t.content %></span>でした！
+            <br><br>
+            <div class="font-semibold">【地域】</div>
+            <%= t.region %>
+            <br><br>
+            <div class="font-semibold">【詳細】</div>
+            <%= t.info %>
+          </div>
+          <div class="pt-3 text-1xl font-semibold">
+            この地域に訪れたときは、<br>
+            ぜひ食べてみてくださいね！
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 font-semibold">▼診断結果をシェアする！▼</div>
+        <div class="flex justify-center">
+          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
+          class="twitter-share-button" 
+          data-text="ご当地うどん診断の結果は、<%= t.region %>の<%= t.content %>でした！！ ▼あなたもご当地うどん診断やってみてね！" 
+          data-url="https://udon-shindan.onrender.com" 
+          data-hashtags="ご当地うどん診断" 
+          data-show-count="false"></a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    <% end %>
+  </div>
 </div>

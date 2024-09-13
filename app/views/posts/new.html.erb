@@ -1,5 +1,5 @@
 <%= form_tag(posts_path, method: :get) do %>
-  <h3 class="text-xl font-bold">Q.1 メインは麺？具も大事？</h3>
+  <h3 class="text-xl font-bold pt-3">Q.1 メインは麺？具も大事？</h3>
   <div class="flex flex-col space-y-2 items-center mt-3">
     <label class="inline-flex">
       <%= radio_button_tag :main, "1", params[:main] == "1", class: "radio radio-accent" %>
