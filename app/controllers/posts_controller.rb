@@ -7,7 +7,6 @@ class PostsController < ApplicationController
     soup = params[:soup]
 
     @result = main + texture + soup
-    @posts = Post.all
-    pp @posts
+    @posts = Post.where(number: @result)
   end
 end
