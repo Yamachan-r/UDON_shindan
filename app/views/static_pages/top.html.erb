@@ -1,9 +1,24 @@
 <div class="hero min-h-screen"
   style="background-image: url(https://udon-shindan.onrender.com/background.png);">
-  <div class="hero-overlay bg-opacity-10"></div>
+  <div class="hero-overlay bg-opacity-50"></div>
   <div class="hero-content text-neutral-content text-center">
     <div class="max-w-md">
-      <%= link_to "早速診断する！", new_post_path, class: "btn btn-outline btn-primary mt-7" %>
+      <h1 class="text-2xl font-bold text-yellow-50">
+        たった3問の質問に答るだけで、<br>
+        あなたにピッタリなご当地うどんを<br>
+        診断できる！</h1>
+      <%= link_to "早速診断する！", new_post_path, class: "btn glass btn-lg mt-7" %>
+      <div tabindex="0" class="collapse collapse-arrow border-base-100 border mt-10">
+        <summary class="collapse-title text-2xl font-bold text-zinc-100">ご当地うどん診断とは？</summary>
+        <div class="collapse-content">
+            <p>
+              全国各地には様々なご当地うどんがあり、<br>
+              それぞれ特徴も違います。<br>
+              たった3つの簡単な質問で、<br>
+              あなたにオススメのご当地うどんを紹介します！
+            </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
