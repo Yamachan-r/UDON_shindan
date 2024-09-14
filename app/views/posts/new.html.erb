@@ -1,4 +1,10 @@
 <%= form_tag(posts_path, method: :get) do %>
+  <% if flash[:alert] %>
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+      <span class="block sm:inline"><%= alert %></span>
+    </div>
+  <% end %>
+
   <h3 class="text-xl font-bold pt-3">Q.1 メインは麺？具も大事？</h3>
   <div class="flex flex-col space-y-2 items-center mt-3">
     <label class="inline-flex">
