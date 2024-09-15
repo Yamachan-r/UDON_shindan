@@ -15,7 +15,14 @@
     <link rel="apple-touch-icon" href="/icon.png">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
-   </head>
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="ご当地うどん診断" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://udon-shindan.onrender.com" />
+    <meta property="og:description" content="あなたにあったご当地うどんを診断しよう!" />
+    <meta property="og:image" content="https://udon-shindan.onrender.com/UDONcard.png" />
+  </head>
 
   <body class="flex flex-col min-h-screen">
     <header class="bg-primary text-white p-5">
