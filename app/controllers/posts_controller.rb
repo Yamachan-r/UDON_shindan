@@ -7,11 +7,11 @@ class PostsController < ApplicationController
     soup = params[:soup]
 
     if main.nil?
-      redirect_to new_post_path, alert: '選択されていない回答があります'
+      redirect_to new_post_path, alert: "選択されていない回答があります"
     elsif texture.nil?
-      redirect_to new_post_path, alert: '選択されていない回答があります'
+      redirect_to new_post_path, alert: "選択されていない回答があります"
     elsif soup.nil?
-      redirect_to new_post_path, alert: '選択されていない回答があります'
+      redirect_to new_post_path, alert: "選択されていない回答があります"
     else
       @result = main + texture + soup
       @posts = Post.where(number: @result)
